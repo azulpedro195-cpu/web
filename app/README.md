@@ -4,7 +4,7 @@ This directory contains the API codebase. It's written in Go and is fully cross-
 
 ## Architecture
 
-### Layout
+### Layout sdyf
 
 The codebase follows idiomatic Go guidelines. Interfaces are preferred as a means of sharing functionality in order to facilitate easier mocking and testing. `cmd/server/main.go` contains the main setup code in a function named `Initialise`. The app itself starts up and blocks when `App.Start` is called. This fires up each of the components in the app in a goroutine then blocks until the root context is cancelled.
 
